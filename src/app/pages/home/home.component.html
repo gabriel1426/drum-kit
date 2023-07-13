@@ -1,5 +1,4 @@
-<div class="drum-kit">
-
+<div class="drum-kit" style="background-image: url('assets/img/background.jpg')">
   <div class="drum-kit__keys-container">
     <app-key *ngFor="let key of keys" [letter]="key.letter" [name]="key.name" [animate]="key.animate"></app-key>
   </div>
