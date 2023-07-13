@@ -50,4 +50,16 @@ export class HomeComponent implements OnInit {
     audio.play();
   }
 
+  playByClick(code: string): void {
+    this.keys.forEach( key => {
+      if (key.code === code) {
+        key.animate = true;
+        this.playAudio(key.audio)
+        setTimeout( () => {
+          key.animate = false;
+        }, 100)
+      }
+    });
+  }
+
 }
